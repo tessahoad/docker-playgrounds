@@ -1,0 +1,14 @@
+version: '2'
+services:
+  postgres:
+    container_name: postgres_car_db
+    image: postgres:9.5.7
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: cars_database
+    volumes:
+      # copy the sql script to create tables
+      - ./sql/V1__init.sql:/docker-entrypoint-initdb.d/create_tables.sql

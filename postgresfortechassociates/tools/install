@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cat "Brewfile" \
+    | brew bundle --file=- install --verbose --no-upgrade
