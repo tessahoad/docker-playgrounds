@@ -10,6 +10,9 @@ tap "homebrew/core"
 # Development
 ################################################################################
 
+# IDE
+brew "dbeaver-community"                        # IDE to work with databases
+
 # Containers
 brew "docker"                                   # Pack, ship and run any application as a lightweight container
 brew "docker-compose"                           # Isolated development environments using Docker
