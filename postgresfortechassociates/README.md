@@ -4,13 +4,30 @@
 
 Go to tools, and run check script to see if dependencies are installed.
 
+```sh
+cd tools
+```
+
+```sh
+./check
+```
+
+If you have problems running the above, you may need to run
+```shell
+chmod +x check
+```
+
 If not installed, run the install script.
+
+```sh
+./install
+```
 
 ###
 
 From the `postgrestechassociates` directory, run 
-```
-$ docker-compose up
+```sh
+docker-compose up
 ```
 
 ## Errors running 
@@ -21,7 +38,7 @@ If you are having issues with running on docker you can try forcibly removing al
 by running the following command:
 
 ```sh
-    docker ps -q -a | xargs docker rm -f
+docker ps -q -a | xargs docker rm -f
 ```
 
 `docker ps -q -a` retrieves the container ids of all running instances, `xargs` iterates
